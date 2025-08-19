@@ -29,7 +29,7 @@ const plugins = [
         jpeg: { quality: 90 },
         jpg: { quality: 90 },
         webp: { lossless: true },
-        avif: { lossless: true }
+        avif: { lossless: true },
     }),
     viteStaticCopy({
         targets: [
