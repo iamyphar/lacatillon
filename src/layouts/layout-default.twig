@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+    <div id="app">
+        <div class="scroll-wacher"></div>
+
+        {% include '@includes/header.twig' %}
+
+        <main role="main">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include '@includes/footer.twig' %}
+    </div>
+
+    {% include '@components/mmenu.twig' %}
+{% endblock %}

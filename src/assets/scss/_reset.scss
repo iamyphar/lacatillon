@@ -1,0 +1,70 @@
+:root {
+    --#{$prefix}navbar-height: 100px;
+    --shadow-hue: 0deg;
+    --shadow-saturation: 0%;
+    --shadow-lightness: 50%;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: 3rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+p,
+ol,
+ul {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    margin-top: auto;
+}
+
+#app {
+    padding-top: var(--#{$prefix}navbar-height);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
