@@ -75,22 +75,3 @@ Anything in the `public` folder will be copied to the into the built assets.
 ### External Devs: github pages (branch test)
 
 When pushing/merging into `test`, the pipeline will build the project and deploy it to github pages. The url will be `https://iamyphar.github.io/lacatillon`.
-
-### Internal Format-z: Contao website (branch main)
-
-Start by uncommenting the `deploy_production` job in `.github-ci.yml`.
-
-When pushing/merging to `main`, this will automatically trigger a pipeline that should deploy the project to the contao assets.
-
-**Requirements:**
-
-1. Have a `main` branch ready, protected.
-2. Have an empty contao website ready on infomaniak
-3. Create an SSH key pair (see Notion "Auto deploy github -> infomaniak")
-4. Create a github ssh user in infomaniak
-5. Add the following variables in github Settings > CI/CD > Variables
-
--   $DEPLOY_SSH_PRIVATE_KEY : the private key
--   $DEPLOY_SSH_USER : PREFIX_github
--   $DEPLOY_SSH_HOST : PREFIX.ftp.infomaniak.com
--   $DEPLOY_SSH_PATH : 2024/files/

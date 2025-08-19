@@ -5,8 +5,8 @@
     "private": true,
     "type": "module",
     "author": {
-        "name": "Format-Z",
-        "email": "technique@format-z.ch"
+        "name": "Raphaël Doutaz",
+        "email": "raphaeldoutaz@gmail.com"
     },
     "scripts": {
         "dev": "vite --host",
