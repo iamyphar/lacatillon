@@ -4,10 +4,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: calc(100svh - var(--#{$prefix}navbar-height));
+    height: calc(60svh - var(--#{$prefix}navbar-height));
     overflow-x: clip;
     padding-block: 7rem;
-    margin-block-end: 3rem;
     color: white;
 }
 
