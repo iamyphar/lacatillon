@@ -11,6 +11,7 @@
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",
+        "build:pages": "VITE_BUILD_TARGET=pages vite build",
         "build:contao": "VITE_BUILD_TARGET=contao vite build",
         "preview": "vite preview",
         "format": "prettier \"src/**/*.{js,ts,scss}\" --write",

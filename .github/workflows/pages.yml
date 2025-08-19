@@ -35,7 +35,7 @@ jobs:
               run: npm install
 
             - name: Build
-              run: npm run build
+              run: npm run build:pages
 
             - name: Prepare public directory
               run: cp -a dist/. public/

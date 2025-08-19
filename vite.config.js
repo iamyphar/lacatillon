@@ -51,6 +51,11 @@ export default defineConfig(() => {
         outDir = './dist'
         assetsDir = 'assets'
         rollupOptions = undefined
+    } else if (buildTarget === 'pages') {
+            base = '/lacatillon/'
+            outDir = './dist'
+            assetsDir = 'assets'
+            rollupOptions = undefined
     } else if (buildTarget === 'contao') {
         base = '/files/fz-static/'
         outDir = './fz-static'
