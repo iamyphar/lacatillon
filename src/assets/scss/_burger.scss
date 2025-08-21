@@ -14,19 +14,6 @@ $burger-color: currentcolor;
 .menu-icon-cross {
     transition: transform 0.5s;
 
-    svg {
-        position: relative;
-        z-index: 1;
-        fill: transparent;
-        stroke-width: 1px;
-        stroke: $burger-color;
-        stroke-dasharray: 170;
-        stroke-dashoffset: 170;
-        transition:
-            stroke-dashoffset 0.5s,
-            transform 0.5s;
-    }
-
     span {
         &::before,
         &::after {
@@ -97,10 +84,6 @@ $burger-color: currentcolor;
             &::after {
                 transform: translateY(0) rotate(-45deg);
             }
-        }
-
-        svg {
-            stroke-dashoffset: 0;
         }
     }
 }

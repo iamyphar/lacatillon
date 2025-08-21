@@ -4,9 +4,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--#{$prefix}navbar-height);
+
+    box-shadow: $box-shadow;
 
     & .navbar-brand img {
-        height: calc(var(--#{$prefix}navbar-height) - 10px);
+        height: 70px;
+    }
+
+    & .navbar-collapse.collapsing, .navbar-collapse.show {
+        & .nav-item {
+            &:first-child {
+                padding-top: 1rem;
+            }
+
+            &:last-child {
+                padding-bottom: 1rem;
+            }
+        }
     }
 }
