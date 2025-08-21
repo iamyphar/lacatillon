@@ -1,0 +1,18 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-5">
+        <h1>
+            Festivals
+        </h1>
+
+        <div class="row row-cols-lg-3 gy-8">
+            <div>
+                {% include '@components/festival.twig' with { ticket: true } %}
+            </div>
+            <div>
+                {% include '@components/festival.twig' %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

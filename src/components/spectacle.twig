@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card position-relative">
     <img src="/src/assets/img/wanted-petula.jpeg" class="card-img-top" alt="Spectacle 1">
     <div class="card-body">
         <h4>Wanted Petula</h4>
@@ -8,10 +8,10 @@
             <br>
             <strong>17h</strong> 23 juin
         </p>
-        <p><i class="fa-solid fa-location-dot me-2"></i> Gare aux Sorcières</p>
+        <p><i class="fa-solid fa-location-dot me-2"></i> Gare aux Sorcières, Moléson</p>
         <div class="d-flex flex-wrap gap-3 justify-content-between">
-            <a href="#" class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i> Voir plus</a>
-            <a href="#" class="btn btn-secondary"><i class="fa-solid fa-calendar me-2"></i> Réserver</a>
+            <a href="/spectacles-reader" class="btn btn-outline-primary stretched-link"><i class="fa-solid fa-plus me-2"></i> En savoir plus</a>
+            {% if ticket %}<a class="btn btn-secondary" href="#"><i class="fas fa-ticket me-2"></i> Billetterie</a>{% endif %}
         </div>
     </div>
 </div>

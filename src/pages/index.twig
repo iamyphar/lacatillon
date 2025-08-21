@@ -8,13 +8,13 @@
         <section class="container d-flex flex-column gap-5">
             <div class="d-flex flex-wrap gap-5 justify-content-between align-items-center mb-5">
                 <h3 class="my-0">Spectacles à venir</h3>
-                <a href="#">Voir tous les spectacles <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <a href="/spectacles">Voir tous les spectacles <i class="fa-solid fa-arrow-right ms-2"></i></a>
             </div>
 
             <div class="row row-cols-lg-3 gy-10">
                 {% for i in range(0, 2) %}
                     <div>
-                        {% include '@components/spectacle.twig' %}
+                        {% include '@components/spectacle.twig' with { ticket: true } %}
                     </div>
                 {% endfor %}
             </div>
@@ -24,7 +24,7 @@
             <div class="container d-flex flex-column gap-5">
                 <div class="d-flex flex-wrap gap-5 justify-content-between align-items-center mb-5">
                     <h3 class="my-0">Actualités</h3>
-                    <a href="#">Voir toutes les actualités <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    <a href="/actualites">Voir toutes les actualités <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
 
                 <div class="row row-cols-lg-3 gy-10">

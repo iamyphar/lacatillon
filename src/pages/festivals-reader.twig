@@ -1,0 +1,72 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-10">
+        <div class="row justify-content-between gy-10">
+            <div class="col-xl-6 col-md-8 d-flex flex-column gap-5">
+                <h1>
+                    Festival du Fond d'la Bleue
+                </h1>
+
+                <div>
+                    <img src="/src/assets/img/programme-1.jpeg" />
+                    <img src="/src/assets/img/programme-2.jpeg" />
+                    <img src="/src/assets/img/programme-3.jpeg" />
+                    <img src="/src/assets/img/programme-4.jpg" />
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8">
+                <div class="card">
+                    <img src="/src/assets/img/fond-dla-bleue.jpeg" alt="Spectacles Reader" class="card-img-top">
+
+                    <div class="card-body">
+                        <p>
+                            5-6-7 mai 2023
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot me-2"></i> Gare aux Sorcières, Moléson
+                        </p>
+
+                        <p>
+                            <a class="btn btn-secondary" href="#"><i class="fas fa-ticket me-2"></i> Billetterie</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>Galerie</h4>
+            <p>
+                Merci à <a href="https://www.marielledphotographie.com/" target="_blank">marielledphotographie.com</a> et Félicien Murith pour les photos.
+            </p>
+            <div class="pswp-gallery" id="gallery">
+                <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 gy-8">
+                    {% for i in range(0, 6) %}
+                        <div>
+                            <a href="/src/assets/img/fdb-{{ i + 1 }}.jpg" class="position-relative ratio ratio-1x1"
+                               data-pswp-width="4752"
+                               data-pswp-height="3168"
+                               data-cropped="true"
+                               target="_blank">
+                                <img src="/src/assets/img/fdb-{{ i + 1 }}.jpg" alt="" class="h-100 w-100 object-fit-cover" />
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% for i in range(7,9) %}
+                        <div>
+                            <a href="/src/assets/img/fdb-{{ i + 1 }}.jpg" class="position-relative ratio ratio-1x1"
+                               data-pswp-width="3840"
+                               data-pswp-height="5760"
+                               data-cropped="true"
+                               target="_blank">
+                                <img src="/src/assets/img/fdb-{{ i + 1 }}.jpg" alt="" class="h-100 w-100 object-fit-cover" />
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

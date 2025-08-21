@@ -1,0 +1,22 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-5">
+        <h1>
+            Spectacles
+        </h1>
+
+        <div class="row row-cols-lg-3 gy-8">
+            {% for i in range(0, 2) %}
+                <div>
+                    {% include '@components/spectacle.twig' with { ticket: true } %}
+                </div>
+            {% endfor %}
+            {% for i in range(0, 2) %}
+                <div>
+                    {% include '@components/spectacle.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

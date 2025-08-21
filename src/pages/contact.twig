@@ -1,0 +1,60 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-5">
+        <h1>
+            Contact
+        </h1>
+
+        <div class="row gx-lg-15 gy-10">
+            <div class="col-lg-4 order-lg-last d-flex flex-column gap-10">
+                <div>
+                    <h6>Amandine Morand</h6>
+                    <a href="mailto:info@lacatillon.ch">info@lacatillon.ch</a>
+                </div>
+                <div>
+                    <h5>Adresse</h5>
+                    <p>
+                        Gare aux Sorcières<br>
+                        Place de l'Ichtyosaure 1<br>
+                        1663 Moléson-sur-Gruyères
+                    </p>
+                    <a href="https://maps.app.goo.gl/3ZUuaSZbjGhYUDhM9" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-right me-2"></i>
+                        Itinéraire
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h4>
+                    Formulaire de contact
+                </h4>
+                <form>
+                    <!-- Nom et prénom* / Email / Sujet / Message -->
+                    <div class="row row-cols-lg-2 gy-5">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nom et prénom*</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" class="form-control" id="subject" name="subject">
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="message" class="form-label">Message*</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                            <button type="submit" class="btn btn-secondary mt-3">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

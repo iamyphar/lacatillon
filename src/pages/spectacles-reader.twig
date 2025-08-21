@@ -1,0 +1,82 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-10">
+        <div class="row justify-content-between gy-10">
+            <div class="col-xl-6 col-md-8 d-flex flex-column gap-5">
+                <h1>
+                    Wanted Petula
+                </h1>
+
+                <div>
+                    <p>
+                        Un voyage intergalactique, une famille excentrique et plein de rebondissements !
+                    </p>
+                    <p>
+                        Embarquez avec nous dans notre nouveau spectacle où l’amour dépasse les limites de l’espace 🪐
+                    </p>
+                    <p>
+                        On se réjouit de vous accueillir à La Gare aux Sorcières !✨
+                    </p>
+                    <p>
+                        La pièce Wanted Petula de Fabrice Melquiot est publiée et représentée par L’ARCHE - éditeur & agence théâtrale. www.arche-editeur.com
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-8">
+                <div class="card">
+                    <img src="/src/assets/img/wanted-petula.jpeg" alt="Spectacles Reader" class="card-img-top">
+
+                    <div class="card-body">
+                        <p>
+                            <strong>20h15</strong> 20-21-22-23 | 27-28-29 juin
+                            <br>
+                            <strong>17h</strong> 23 juin
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot me-2"></i> Gare aux Sorcières, Moléson
+                        </p>
+
+                        <p>
+                            <a class="btn btn-secondary" href="#"><i class="fas fa-ticket me-2"></i> Billetterie</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>Galerie</h4>
+            <p>
+                Merci à <a href="https://www.instantsimages.ch" target="_blank">instantsimages.ch</a> pour les photos.
+            </p>
+            <div class="pswp-gallery" id="gallery">
+                <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 gy-8">
+                    {% for i in range(0, 7) %}
+                        <div>
+                            <a href="/src/assets/img/wanted-petula-{{ i + 1 }}.jpg" class="position-relative ratio ratio-1x1"
+                               data-pswp-width="1559"
+                               data-pswp-height="2338"
+                               data-cropped="true"
+                               target="_blank">
+                                <img src="/src/assets/img/wanted-petula-{{ i + 1 }}.jpg" alt="" class="h-100 w-100 object-fit-cover" />
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% for i in range(8,9) %}
+                        <div>
+                            <a href="/src/assets/img/wanted-petula-{{ i + 1 }}.jpg" class="position-relative ratio ratio-1x1"
+                               data-pswp-width="3507"
+                               data-pswp-height="2338"
+                               data-cropped="true"
+                               target="_blank">
+                                <img src="/src/assets/img/wanted-petula-{{ i + 1 }}.jpg" alt="" class="h-100 w-100 object-fit-cover" />
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

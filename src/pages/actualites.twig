@@ -1,0 +1,17 @@
+{% extends '@layouts/layout-default.twig' %}
+
+{% block content %}
+    <section class="container d-flex flex-column gap-5">
+        <h1>
+            Actualités
+        </h1>
+
+        <div class="row row-cols-lg-3 gy-8">
+            {% for i in range(0, 5) %}
+                <div>
+                    {% include '@components/article.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

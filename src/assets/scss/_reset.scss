@@ -30,6 +30,7 @@ h4,
 h5,
 h6 {
     text-wrap: balance;
+    text-transform: uppercase;
 }
 
 img {
@@ -74,14 +75,14 @@ section {
 }
 
 a {
-    font-weight: 500;
-    transition: color .15s ease;
+    font-weight: $font-weight-bold;
+    transition: color .2s ease;
 
     footer & {
         color: $black;
 
         &:hover {
-            color: $primary;
+            color: lighten($black, 25%);
         }
     }
 }
